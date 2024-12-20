@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from Detect_Color_03 import Detect_Color
 
-webcam = cv2.VideoCapture(2)
+webcam = cv2.VideoCapture(0) # 0 is default camera id, change it gradually for selecting your desired camera
 while True:
 	_, frame = webcam.read()
 
