@@ -16,12 +16,6 @@ class Detect_Color:
 		for pic, contour in enumerate(self.contours):
 			self.area = cv2.contourArea(contour)
 			if (self.area > 300):
-				#investigar que hace boundingrect
 				x, y, w, h = cv2.boundingRect(contour)
-				#imageframe pq es un visual que se mostrara ahi
-				self.frame = cv2.rectangle(self.frame, (x, y),
-										(x + w, y + h),
-										self.bgr, 2)
-				cv2.putText(self.frame, self.name, (x, y),
-							cv2.FONT_HERSHEY_SIMPLEX, 1.0,
-							self.bgr)
+				self.frame = cv2.rectangle(self.frame, (x, y), (x + w, y + h), self.bgr, 2)
+				cv2.putText(self.frame, self.name, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, self.bgr)
