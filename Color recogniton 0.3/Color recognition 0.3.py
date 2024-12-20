@@ -2,12 +2,8 @@ import numpy as np
 import cv2
 from Detect_Color_03 import Detect_Color
 
-
-
 webcam = cv2.VideoCapture(2)
-
 while (1):
-	## Asigna variable a los frames
 	_, frame = webcam.read()
 
 	red = Detect_Color(frame, [170, 130, 100], [180, 255, 255], 800, "Red", (0,0,255))
@@ -21,8 +17,6 @@ while (1):
 	pink = Detect_Color(frame, [135, 100, 100], [160, 255, 255], 800, "Pink", (255, 0, 255))
 	gray = Detect_Color(frame, [0, 0, 0], [80, 80, 80], 800, "Gray", (128, 128, 128))
 
-	# Iniciar programa
-	## muestra el programa con el nombre Color Detection y las frames modificadas
 	cv2.imshow("Color Detection", frame)
 	if cv2.waitKey(10) & 0xFF == ord('q'):
 		webcam.release()
