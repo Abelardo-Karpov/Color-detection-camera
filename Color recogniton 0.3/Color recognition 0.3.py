@@ -3,7 +3,7 @@ import cv2
 from Detect_Color_03 import Detect_Color
 
 webcam = cv2.VideoCapture(2)
-while (1):
+while True:
 	_, frame = webcam.read()
 
 	red = Detect_Color(frame, [170, 130, 100], [180, 255, 255], 800, "Red", (0,0,255))
