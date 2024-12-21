@@ -36,7 +36,7 @@ class Detect_Color:
 			for func in Colors:
 				func()
 					
-			cv2.imshow("Color recognition 0.3.5", frame)
+			cv2.imshow("Color recognition 0.4", frame)
 			if cv2.waitKey(10) & 0xFF == ord('q'):
 				webcam.release()
 				cv2.destroyAllWindows()
